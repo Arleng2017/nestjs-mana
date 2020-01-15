@@ -18,9 +18,12 @@ type CatType {
 
 type Mutation {
   createCat(input: CatInput!): CatType!
+  updateCat(input: CatInput!, id: String!): CatType!
 }
 
 type Query {
   hello: String!
   cats: [CatType!]!
+  getCat(id: String!): CatType!
+  deleteCat(id: String!): CatType!
 }
